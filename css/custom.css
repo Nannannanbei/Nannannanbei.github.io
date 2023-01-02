@@ -118,7 +118,7 @@
     width: 16px;
     height: 16px;
     /* ����ı����ĵ�ɫ */
-    background: var(--theme-color);
+    background: rgb(57,165,165);
     border-radius: 8px;
     opacity: 0.25;
     z-index: 10086;
@@ -127,24 +127,50 @@
     transition-property: background, opacity, transform;
 }
 
-    #cursor.hidden {
-        opacity: 0;
-    }
+#cursor.hidden {
+    opacity: 0;
+}
 
-    #cursor.hover {
-        opacity: 0.1;
-        transform: scale(2.5);
-        -webkit-transform: scale(2.5);
-        -moz-transform: scale(2.5);
-        -ms-transform: scale(2.5);
-        -o-transform: scale(2.5);
-    }
+#cursor.hover {
+    opacity: 0.1;
+    transform: scale(2.5);
+    -webkit-transform: scale(2.5);
+    -moz-transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    -o-transform: scale(2.5);
+}
 
-    #cursor.active {
-        opacity: 0.5;
-        transform: scale(0.5);
-        -webkit-transform: scale(0.5);
-        -moz-transform: scale(0.5);
-        -ms-transform: scale(0.5);
-        -o-transform: scale(0.5);
-    }
+#cursor.active {
+    opacity: 0.5;
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+}
+
+/* ��������ʽ */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(73, 177, 245, 0.2);
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--theme-color);
+    background-image: -webkit-linear-gradient( 45deg, rgba(255, 255, 255, 0.4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.4) 75%, transparent 75%, transparent );
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+::-moz-selection {
+    color: #fff;
+    background-color: var(--theme-color);
+}
